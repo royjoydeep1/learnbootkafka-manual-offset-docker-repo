@@ -55,7 +55,7 @@ jobs:
       - run:
           name: Do the docker build
           command: |
-            docker build -t royjoydeep1/dockerkafka:latest .
+            docker build  -f ./src/main/docker/Dockerfile -t royjoydeep1/dockerkafka:latest .
             mkdir -p docker-cache
             docker save -o docker-cache/built-image.tar royjoydeep1/dockerkafka
             docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
