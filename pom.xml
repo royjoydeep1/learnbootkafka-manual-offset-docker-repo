@@ -56,10 +56,8 @@
 	</dependencies>
 
 	<build>
-		 <dockerFileDir>${project.basedir}/src/main/docker/</dockerFileDir>
-     <assembly>
-          <descriptorRef>artifact</descriptorRef>
-     </assembly>
+		 
+     
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -73,6 +71,9 @@
             <configuration>
                 <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
                 <dockerDirectory>src/main/docker</dockerDirectory>
+		    <assembly>
+          <descriptorRef>artifact</descriptorRef>
+     </assembly>
                 <resources>
                     <resource>
                         <targetPath>/</targetPath>
