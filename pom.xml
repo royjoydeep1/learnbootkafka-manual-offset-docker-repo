@@ -56,9 +56,9 @@
 	</dependencies>
 
 	<build>
-		 <dockerFileDir>.</dockerFileDir>
+		 <dockerFileDir>${project.basedir}/src/main/docker/</dockerFileDir>
      <assembly>
-          <descriptorRef>artifact-with-dependencies</descriptorRef>
+          <descriptorRef>artifact</descriptorRef>
      </assembly>
 		<plugins>
 			<plugin>
