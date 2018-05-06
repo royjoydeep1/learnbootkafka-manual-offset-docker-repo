@@ -44,6 +44,6 @@ jobs:
           command: |
             docker build -f Dockerfile -t royjoydeep1/dockerkafka .
             mkdir -p docker-cache
-            docker save -o docker-cache/built-image.tar royjoydeep1/dockerkafka 
-		        docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+            docker save -o docker-cache/built-image.tar royjoydeep1/dockerkafka
+	    docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
             docker push royjoydeep1/dockerkafka
