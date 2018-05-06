@@ -56,6 +56,10 @@
 	</dependencies>
 
 	<build>
+		 <dockerFileDir>.</dockerFileDir>
+     <assembly>
+          <descriptorRef>artifact-with-dependencies</descriptorRef>
+     </assembly>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
